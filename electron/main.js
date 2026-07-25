@@ -1,5 +1,4 @@
 import { app, BrowserWindow } from "electron";
-import * as path from "path";
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -10,16 +9,16 @@ function createWindow() {
     fullscreenable: false,
     center: true,
     autoHideMenuBar: true,
-    titleBarStyle: "hidden", // Opsional: membuat tampilan lebih modern
+    titleBarStyle: "hidden",
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
       nodeIntegration: true,
+      contextIsolation: false, // Mempermudah MVP tanpa file preload
     },
   });
 
-  mainWindow.setMenu(null); // Menghilangkan menu bar
+  mainWindow.setMenu(null);
 
-  // Sesuaikan dengan port environment React kamu (biasanya 5173 untuk Vite)
+  // URL ini mengarah ke server React (Vite)
   mainWindow.loadURL("http://localhost:5173");
 }
 

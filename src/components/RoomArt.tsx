@@ -5,7 +5,7 @@ import bgRoom from "../assets/images/room.png"; // Ini gambar gabungan dinding, 
 import bookshelf from "../assets/images/bookshelf.png";
 import lamp from "../assets/images/lamp.png";
 import chair from "../assets/images/chair.png";
-import char from "../assets/images/char.png";
+import char from "../assets/images/charel.png";
 import cat from "../assets/images/cat.png";
 
 export default function RoomArt() {
@@ -23,13 +23,13 @@ export default function RoomArt() {
       <img
         src={bookshelf}
         alt="bookshelf"
-        className="absolute top-[22%] left-[2%] w-[48%] z-10"
+        className="absolute top-[26%] left-[-10%] w-[58%] z-10"
       />
 
       {/* 3. LAMPU MEJA (Z-20) */}
       {/* Posisi di atas rak buku dengan efek cahaya (pulse) */}
-      <div className="absolute top-[5%] left-[10%] z-20 flex justify-center items-center">
-        <div className="absolute w-20 h-20 bg-yellow-400/30 blur-2xl rounded-full animate-pulse"></div>
+      <div className="absolute top-[10%] left-[10%] z-20 flex justify-center items-center">
+        <div className="absolute w-100 h-100 bg-yellow-400/30 blur-2xl rounded-full animate-pulse"></div>
         <img src={lamp} alt="lamp" className="relative w-[120px]" />
       </div>
 
@@ -38,7 +38,7 @@ export default function RoomArt() {
       <img
         src={chair}
         alt="chair"
-        className="absolute top-[40%] right-[2%] w-[45%] z-10"
+        className="absolute top-[41%] right-[-5%] w-[48%] z-10"
       />
 
       {/* 5. KARAKTER UTAMA (Z-30) */}
@@ -54,7 +54,7 @@ export default function RoomArt() {
       <img
         src={cat}
         alt="white cat"
-        className="absolute bottom-[12%] right-[10%] w-[18%] z-40"
+        className="absolute bottom-[23%] right-[10%] w-[20%] z-40"
       />
     </div>
   );
